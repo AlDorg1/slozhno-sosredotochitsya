@@ -12,6 +12,7 @@
   --title-color: #DB00FF; 
   --background-color: #FF0070; 
   --color-hover: #FF007066; 
+  --display-decorated: 1;
 } 
  
 @media (prefers-color-scheme: dark) { 
@@ -23,5 +24,6 @@
   --title-color: #DB00FF; 
   --background-color: #FF0070; 
   --color-hover: #FF007066; 
+  --display-decorated: 1;
     } 
   }

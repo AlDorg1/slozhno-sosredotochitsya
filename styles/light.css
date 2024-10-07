@@ -12,9 +12,12 @@
   --title-color: #FFC2E6; 
   --background-color: #FF8DCB; 
   --color-hover: #32312D66; 
+  --display-decorated: 0;
    
 } 
- 
+
+
+
  
 @media(prefers-color-scheme: light) { 
 .page.theme_light { 
@@ -25,5 +28,7 @@
   --title-color: #FFC2E6; 
   --background-color: #FF8DCB; 
   --color-hover: #32312D66; 
+  --display-decorated: 0;
   } 
+  
 }
