@@ -228,11 +228,12 @@
  
 .answers-block { 
   max-width: 315px; 
+  margin-bottom: 20px;
 } 
  
 .section-rules { 
   display: flex; 
-  margin-top: 80px; 
+  margin-top: 60px; 
 } 
  
 .rules { 
@@ -413,8 +414,13 @@
  
   .answers-block { 
     max-width: 728px; 
+    margin-bottom: 0;
   } 
  
+.section-rules {
+  margin-top: 80px;
+}
+
   .rules { 
     max-width: 472px; 
   } 
