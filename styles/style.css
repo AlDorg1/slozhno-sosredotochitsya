@@ -1,12 +1,10 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-* {
-  outline: 1px solid black;
-}
+
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   width: 1024px;
   margin: 0 auto;
-  /* background-image: var(--background-image);*/
+  background-image: var(--background-image);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -34,6 +32,8 @@
   grid-template-rows: 29% 42% 29%;
   min-height: 768px;
   position: relative;
+  margin: 0;
+    padding: 0;
 }
 
 .header::before,
@@ -43,10 +43,15 @@
   border-right: 1px solid var(--accent-color);
   height: 25px;
   position: absolute;
-  top: 24px;
+  top: 20px;
   right: 20px;
   border-top: 1px solid var(--accent-color);
   width: 25px;
+}
+
+.footer::before {
+  top: 25px;
+  right: 0;
 }
 
 .header::after,
@@ -60,6 +65,11 @@ footer::after {
   border-bottom: 1px solid var(--accent-color);
   width: 25px;
   bottom: 20px;
+}
+
+.footer::after {
+  bottom: 20px;
+  left: 0;
 }
 
 .decorated-zone-element {
@@ -180,6 +190,9 @@ footer::after {
 
 .main {
   margin-top: 60px;
+    width: calc(100% - 40px);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .section-difficults__title {
@@ -204,7 +217,6 @@ footer::after {
 .section-difficults {
   display: flex;
   max-width: 984px;
-  margin-left: 20px;
 }
 
 .section-questions__title {
@@ -231,23 +243,17 @@ footer::after {
 
 .answers {
   display: flex;
-  gap: 20px;
+  gap: 19px;
   flex-wrap: wrap;
 }
 
 .section-questions {
   margin-top: 80px;
-  margin-left: 20px;
-}
-
-.answers-block {
-  max-width: 315px;
-  gap: 20px;
 }
 
 .section-rules {
   display: flex;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .rules {
@@ -257,7 +263,6 @@ footer::after {
 .section-rules__title {
   max-width: 315px;
   margin-right: 20px;
-  margin-left: 20px;
   color: var(--accent-color);
 }
 
@@ -281,7 +286,6 @@ footer::after {
 
 .section-pictures {
   margin-top: 80px;
-  margin-left: 20px;
 }
 
 .section-pictures__title {
@@ -292,7 +296,6 @@ footer::after {
 
 .section-pictures__content {
   display: grid;
-  grid-template-columns: 315px 315px 315px;
   grid-template-rows: 260px 315px 428px;
   gap: 20px;
 }
@@ -327,6 +330,9 @@ footer::after {
   min-height: 768px;
   display: flex;
   position: relative;
+  width: calc(100% - 40px);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .footer__title {
@@ -444,7 +450,6 @@ footer::after {
   }
 
   .section-pictures__content {
-    grid-template-columns: repeat(3, 229px);
     grid-template-rows: 192px 230px 318px;
   }
 
@@ -479,6 +484,9 @@ footer::after {
 @media (width <= 375px) {
   .main {
     margin-top: 40px;
+    width: calc(100% - 20px);
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .page {
@@ -488,28 +496,31 @@ footer::after {
 
   .decorated-zone-element {
     top: 10px;
-    right: 38px;
+    right: 30px;
   }
 
   .header::before,
   .footer::before {
     top: 10px;
-    right: 10px;
   }
 
-  .header::after,
-  footer::after {
+  .header::after {
     left: 10px;
+    bottom: 11px;
+  }
+
+  .footer::after {
     bottom: 11px;
   }
 
   .header {
     min-height: 668px;
+    width: calc(100% - 10px);
+    margin-right: 10px;
   }
 
   .header__theme-menu {
     margin-block-end: 0px;
-    margin-inline-end: 10px;
     margin-block-start: 56px;
   }
 
@@ -534,7 +545,6 @@ footer::after {
   .section-difficults {
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
   }
 
   .section-difficults__title {
@@ -553,7 +563,6 @@ footer::after {
 
   .section-questions {
     margin-top: 50px;
-    margin-left: 10px;
   }
 
   .section-questions__text-title {
@@ -567,7 +576,6 @@ footer::after {
   .section-rules {
     margin-top: 50px;
     flex-direction: column;
-    margin-left: 10px;
   }
 
   .section-rules__title {
@@ -591,7 +599,6 @@ footer::after {
   }
 
   .section-pictures {
-    margin-left: 10px;
     margin-top: 50px;
   }
 
@@ -601,32 +608,38 @@ footer::after {
   }
 
   .img--1 {
-    width: 355px;
+    max-width: 355px;
     height: 142px;
   }
 
   .img--2 {
-    width: 355px;
+    max-width: 355px;
     height: 355px;
   }
 
   .img--3 {
-    width: 355px;
+    max-width: 355px;
     height: 237px;
   }
 
   .img--4 {
-    width: 355px;
+    max-width: 355px;
     height: 355px;
   }
 
   .img--5 {
-    width: 355px;
+    max-width: 355px;
     height: 237px;
   }
 
   .footer {
     min-height: 668px;
-    margin-top: 40px;
+    margin-top: 40px;width: calc(100% - 20px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .footer__title {
+    max-width: 355px;
   }
 }
