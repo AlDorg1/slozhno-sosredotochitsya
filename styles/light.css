@@ -20,7 +20,7 @@
 
  
 @media(prefers-color-scheme: light) { 
-.page.theme_light { 
+:root { 
   --accent-color: #353430; 
   --text-color: #353430; 
   --paragraph-text: #353430;   

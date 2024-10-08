@@ -15,15 +15,3 @@
   --display-decorated: 1;
 } 
  
-@media (prefers-color-scheme: dark) { 
-  .page.theme_dark { 
-    --accent-color: #ff0070; 
-  --text-color: #F1B2CE; 
-  --paragraph-text: #000028; 
-  --background-image: url(../images/cover-image-dark.png); 
-  --title-color: #DB00FF; 
-  --background-color: #FF0070; 
-  --color-hover: #FF007066; 
-  --display-decorated: 1;
-    } 
-  }
