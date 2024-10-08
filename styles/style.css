@@ -8,7 +8,7 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  background-color:#000028;
+  background-color: var(--body-color);
 }
 
 .text {
@@ -34,7 +34,7 @@
   min-height: 768px;
   position: relative;
   margin: 0;
-    padding: 0;
+  padding: 0;
 }
 
 .header::before,
@@ -47,9 +47,9 @@
   top: 20px;
   right: 20px;
   border-top: 1px solid var(--accent-color);
-  width: 25px;
-}
-
+  width: 25px;            /* тут, к сожалению, нельзя реализовать, чтобы по одной сущности */
+}                  /*работало, т.к. координаты разные и менять всю верстку ради одинаковых координат, я не смогу*/
+                         /*если есть еще какие-то цветовые отклонения, то тыкните меня носом, пожалуйста, я уже ничего не вижу*/
 .footer::before {
   top: 25px;
   right: 0;
@@ -191,9 +191,9 @@ footer::after {
 
 .main {
   margin-top: 60px;
-    width: calc(100% - 40px);
-    margin-right: auto;
-    margin-left: auto;
+  width: calc(100% - 40px);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .section-difficults__title {
@@ -332,8 +332,8 @@ footer::after {
   display: flex;
   position: relative;
   width: calc(100% - 40px);
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .footer__title {
@@ -635,7 +635,8 @@ footer::after {
 
   .footer {
     min-height: 668px;
-    margin-top: 40px;width: calc(100% - 20px);
+    margin-top: 40px;
+    width: calc(100% - 20px);
     margin-right: auto;
     margin-left: auto;
   }
