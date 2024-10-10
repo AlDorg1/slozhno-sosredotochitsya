@@ -1,7 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  width: 1024px;
   margin: 0 auto;
   background-image: var(--background-image);
   background-attachment: fixed;
@@ -236,8 +235,7 @@
 
 .answers {
   display: flex;
-  gap: 19px;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .section-questions {
