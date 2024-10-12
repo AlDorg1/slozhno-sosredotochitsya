@@ -95,7 +95,6 @@
     margin-right: auto;
     margin-left: auto;
     display: grid;
-    min-height: 668px;
     grid-template-rows: min-content min-content min-content;
     position: relative;
   }
