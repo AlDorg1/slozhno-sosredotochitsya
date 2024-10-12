@@ -12,9 +12,9 @@
 .text {
   font-family: "IBM Plex mono", monospace;
   font-size: 18px;
-  font-weight: 400;                          /*вот сейчас точно нет скрола, я каждой секции прописал ширину, проследил, что*/
-  line-height: 23.4px;                    /* ничего не вываливается, !вручную! на калькуляторе высчитывал ширину дочерних объектов*/
-  text-align: left;                                        /*его здесь просто вот никак не может быть*/
+  font-weight: 400; 
+  line-height: 23.4px; 
+  text-align: left; 
 }
 
 .title {
@@ -25,475 +25,163 @@
   text-align: left;
 }
 
-.header {
-  height: 100vh;
-    display: grid;
-    min-height: 668px;
-    grid-template-rows: min-content min-content min-content;
-}
-
-.decorated-zone::before {
-  display: block;
-  content: "";
-  border-right: 1px solid var(--accent-color);
-  height: 25px;
-  position: absolute;
-  top: 20px;
-  right: 0;
-  border-top: 1px solid var(--accent-color);
-  width: 25px;
-}
-
-.decorated-zone::after {
-  display: block;
-  content: "";
-  border-left: 1px solid var(--accent-color);
-  height: 25px;
-  position: absolute;
-  left: 0;
-  border-bottom: 1px solid var(--accent-color);
-  width: 25px;
-  bottom: 20px;
-}
-
-.decorated-zone-element {
-  position: absolute;
-  color: var(--accent-color);
-  text-align: center;
-  font-weight: 400;
-  line-height: 25px;
-  top: 20px;
-  right: 30px;
-  opacity: var(--display-decorated);
-  text-transform: uppercase;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 18px;
-}
-
-.decorated-zone-element::after {
-  content: "";
-  inline-size: 9px;
-  block-size: 9px;
-  border-radius: 50%;
-  position: absolute;
-  inset-block-start: 8px;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 4px 2px var(--accent-color);
-  margin-left: 10px;
-  opacity: var(--display-decorated);
-}
-
-.header__theme-menu-list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding-block-start: 20px;
-}
-
-.header__theme-menu-item {
-  width: 70px;
-  border-color: var(--accent-color);
-  display: flex;
-  justify-content: center;
-  color: var(--accent-color);
-}
-
-.header__title {
-  font-family: "IBM Plex mono", monospace;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-weight: 700;
-  line-height: 129.53px;
-  text-align: left;
-  text-shadow: 4px 4px 0px #ff0070;
-  color: var(--title-color);
-  align-self: center;
-  margin-block-start: 276px;
-}
-
-.header__theme-menu-button {
-  background-color: transparent;
-  border: none;
-  font-family: "IBM Plex mono", monospace;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: center;
-  text-transform: lowercase;
-  color: var(--accent-color);
-}
-
-.header__theme-menu-button:hover {
-  border: 1px solid var(--color-hover);
-}
-
-.header__theme-menu-button:focus {
-  outline: none;
-}
-
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
-}
-
-.header__theme-menu-button_active {
-  pointer-events: none;
-  border: 1px solid var(--accent-color);
-  padding-left: 13px;
-  padding-right: 13px;
-  line-height: 20px;
-}
-
-.title-decor {
-  background-color: var(--background-color);
-}
-
-.text-link {
-  text-decoration: none;
-  color: var(--text-color);
-  text-shadow: 1px 2px 0px var(--background-color);
-}
-
-.text-link:hover {
-  border-bottom: 1px solid var(--text-color);
-}
-
-.text-link:focus {
-  outline: none;
-}
-
-.text-link:focus-visible {
-  border: 1px solid var(--text-color);
-}
-
-.header__text {
-  max-width: 491px;
-  justify-self: end;
-  margin-block-start: 115px;
-  margin-inline-end: 20px;
-  color: var(--paragraph-text);
-}
-
-.main {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.section-difficults__title {
-  color: var(--accent-color);
-  max-width: 315px;
-}
-
-.section-difficults__text {
-  color: var(--text-color);
-  width: 100%;
-}
-
-.section-difficults__text:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.section-difficults__text-title {
-  color: var(--paragraph-text);
-  margin-bottom: 10px;
-}
-
-.section-difficults {
-  display: grid;
-  margin-left: 20px;
-  margin-right: 20px;
-  grid-template-columns: min(35%, 314px) 1fr;
-}
-
-.section-questions__title {
-  color: var(--accent-color);
-  margin-bottom: 20px;
-  max-width: 315px;
-}
-
-.section-questions__text-title {
-  color: var(--paragraph-text);
-  margin-bottom: 10px;
-}
-
-.section-questions__text {
-  color: var(--text-color);
-}
-
-.section-questions__text:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.description {
-  margin-left: 20px;
-}
-
-.answers {
-      gap: 20px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      
-}
-
-.section-questions {
-  margin-top: 80px;
-  width: calc(100% - 40px);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section-rules {
-  display: grid;
-    margin-top: 80px; 
-    width: calc(100% - 40px);
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: min(35%, 314px) 1fr;
-}
-
-.section-rules__title {
-  max-width: 315px;
-  color: var(--accent-color);
-}
-
-.rules__title {
-  margin-bottom: 20px;
-  color: var(--paragraph-text);
-}
-
-.rules{
-  margin-left: 20px;
-}
-
-.section-rules__text-title {
-  color: var(--paragraph-text);
-  margin-bottom: 10px;
-}
-
-.section-rules__text {
-  color: var(--text-color);
-}
-
-.section-rules__text:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.section-pictures {
-  margin-top: 80px;
-width: calc(100% - 40px);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section-pictures__title {
-  color: var(--paragraph-text);
-  margin-bottom: 20px;
-}
-
-.section-pictures__content {
-  display: grid;
-  grid-template-rows: 260px 315px 428px;
-  gap: 20px;
-}
-
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.img--1 {
-  grid-column: 1/3;
-}
-
-.img--2 {
-  grid-column: 3/4;
-  grid-row: 1/3;
-}
-
-.img--3 {
-  grid-row: 2/4;
-}
-
-.img--5 {
-  grid-column: 2/4;
-}
-
-.footer {
-  margin-top: 60px;
-  height: 100vh;
-  min-height: 768px;
-  display: flex;
-  position: relative;
-  width: calc(100% - 40px);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.footer__title {
-  font-family: "IBM Plex mono", monospace;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-weight: 700;
-  line-height: 129.53px;
-  text-align: left;
-  color: var(--title-color);
-  text-shadow: 2px 2px 0px #ff0070;
-  margin: auto;
-}
-
-@media (width <= 768px) {
-  .page {
-    max-width: 768px;
-    margin: 0 auto;
-  }
-
-  .header {
-    min-height: 1024px;
-  }
-
-  .header__title {
-    margin-block-start: 160px;
-  }
-
-  .header__theme-menu {
-    justify-self: end;
-       
-        margin-inline-end: 20px;
-        margin-block-start: 175px;
-  }
-
-  .header__theme-menu-list {
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
-  }
-
-  .decorated-zone-element {
-    right: 30px;
-  }
-
-  .header__text {
-    max-width: 364px;
-    margin-block-start: 145px;
-  }
-
-  .section-difficults {
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .description {
-    margin-left: 0;
-  }
-
-  .answers {
-    display: flex;
-    flex-direction: column;
-    max-width: 728px;
-  }
-
-  .section-questions {
-    width: calc(100% - 40px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .section-questions__text {
-    max-width: 728px;
-  }
-
-  .section-questions__title {
-    max-width: 236px;
-  }
-
-  .section-questions__text-title {
-    max-width: 728px;
-  }
-
-  .section-rules__title {
- margin-bottom: 20px;
- max-width: 100%;
-  }
-
-  .answers-block {
-    max-width: 728px;
-    margin-bottom: 0;
-  }
-
-  .section-rules {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-
-  }
-
- 
-
-  .section-pictures {
-    width: calc(100% - 40px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .section-pictures__content {
-    grid-template-rows: 192px 230px 318px;
-  }
-
-  .section-pictures__title {
-    max-width: 728px;
-  }
-
-  .footer {
-    min-height: 1024px;
-    width: calc(100% - 40px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (width <= 767px) {
+@media (width >= 375px) {
   .main {
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .page {
     max-width: 375px;
-    margin: 0 auto;
   }
 
   .decorated-zone::before {
+    display: block;
+    content: "";
+    border-right: 1px solid var(--accent-color);
+    height: 25px;
+    position: absolute;
     top: 10px;
     right: 0;
+    border-top: 1px solid var(--accent-color);
+    width: 25px;
   }
 
   .decorated-zone::after {
-    bottom: 10px;
+    display: block;
+    content: "";
+    border-left: 1px solid var(--accent-color);
+    height: 25px;
+    position: absolute;
     left: 0;
+    border-bottom: 1px solid var(--accent-color);
+    width: 25px;
+    bottom: 10px;
   }
 
   .decorated-zone-element {
+    position: absolute;
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: 400;
+    line-height: 25px;
     top: 10px;
     right: 30px;
+    opacity: var(--display-decorated);
+    text-transform: uppercase;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 18px;
+  }
+
+  .decorated-zone-element::after {
+    content: "";
+    inline-size: 9px;
+    block-size: 9px;
+    border-radius: 50%;
+    position: absolute;
+    inset-block-start: 8px;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 4px 2px var(--accent-color);
+    margin-left: 10px;
+    opacity: var(--display-decorated);
   }
 
   .header {
+    height: 100vh;
     min-height: 668px;
     width: calc(100% - 20px);
     margin-right: auto;
     margin-left: auto;
+    display: grid;
+    min-height: 668px;
+    grid-template-rows: min-content min-content min-content;
+    position: relative;
   }
 
   .header__theme-menu {
-    margin-block-start: 57px;
-    margin-inline-end: 0;
+    margin-block-start: 77px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header__theme-menu-list {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__theme-menu-item {
+    width: 70px;
+    border-color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    color: var(--accent-color);
+  }
+
+  .header__theme-menu-button {
+    background-color: transparent;
+    border: none;
+    font-family: "IBM Plex mono", monospace;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    text-transform: lowercase;
+    color: var(--accent-color);
+  }
+
+  .header__theme-menu-button:hover {
+    border: 1px solid var(--color-hover);
+  }
+
+  .header__theme-menu-button:focus {
+    outline: none;
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  .header__theme-menu-button_active {
+    pointer-events: none;
+    border: 1px solid var(--accent-color);
+    padding-left: 13px;
+    padding-right: 13px;
+    line-height: 20px;
+  }
+
+  .title-decor {
+    background-color: var(--background-color);
+  }
+
+  .text-link {
+    text-decoration: none;
+    color: var(--text-color);
+    text-shadow: 1px 2px 0px var(--background-color);
+  }
+
+  .text-link:hover {
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .text-link:focus {
+    outline: none;
+  }
+
+  .text-link:focus-visible {
+    border: 1px solid var(--text-color);
   }
 
   .header__title {
+    font-family: "IBM Plex mono", monospace;
+    font-weight: 700;
+    text-align: left;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    max-width: 355px;
     align-self: start;
+    text-shadow: 4px 4px 0px #ff0070;
+    color: var(--title-color);
     margin-block-start: 70px;
     line-height: 95.7px;
     margin-right: auto;
@@ -502,10 +190,11 @@ width: calc(100% - 40px);
 
   .header__text {
     max-width: 355px;
-        margin-block-start: 53px;
-        margin-inline-end: 0;
-        margin-left: auto; 
-         margin-right: auto;
+    margin-block-start: 53px;
+    margin-inline-end: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--paragraph-text);
   }
 
   .section-difficults {
@@ -519,6 +208,21 @@ width: calc(100% - 40px);
   .section-difficults__title {
     max-width: 355px;
     margin-bottom: 20px;
+    color: var(--accent-color);
+  }
+
+  .section-difficults__text {
+    color: var(--text-color);
+    width: 100%;
+  }
+
+  .section-difficults__text:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .section-difficults__text-title {
+    color: var(--paragraph-text);
+    margin-bottom: 10px;
   }
 
   .description {
@@ -528,6 +232,7 @@ width: calc(100% - 40px);
 
   .section-questions__title {
     max-width: 355px;
+    color: var(--accent-color);
   }
 
   .section-questions {
@@ -539,10 +244,18 @@ width: calc(100% - 40px);
 
   .section-questions__text-title {
     max-width: 355px;
+    color: var(--paragraph-text);
+    margin-bottom: 10px;
+    margin-top: 20px;
   }
 
   .section-questions__text {
     max-width: 355px;
+    color: var(--text-color);
+  }
+
+  .section-questions__text:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   .section-rules {
@@ -557,10 +270,29 @@ width: calc(100% - 40px);
     max-width: 355px;
     margin-bottom: 20px;
     margin-right: 0;
+    color: var(--accent-color);
+  }
+
+  .rules__title {
+    margin-bottom: 20px;
+    color: var(--paragraph-text);
   }
 
   .rules {
     max-width: 355px;
+  }
+
+  .section-rules__text-title {
+    color: var(--paragraph-text);
+    margin-bottom: 10px;
+  }
+
+  .section-rules__text {
+    color: var(--text-color);
+  }
+
+  .section-rules__text:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   .section-pictures__content {
@@ -581,6 +313,7 @@ width: calc(100% - 40px);
   .section-pictures__title {
     max-width: 355px;
     margin-bottom: 10px;
+    color: var(--paragraph-text);
   }
 
   .img--1 {
@@ -614,9 +347,278 @@ width: calc(100% - 40px);
     width: calc(100% - 20px);
     margin-right: auto;
     margin-left: auto;
+    height: 100vh;
+    display: flex;
+    position: relative;
   }
 
   .footer__title {
     max-width: 355px;
+    font-family: "IBM Plex mono", monospace;
+    font-weight: 700;
+    line-height: 129.53px;
+    text-align: left;
+    color: var(--title-color);
+    text-shadow: 2px 2px 0px #ff0070;
+    margin: auto;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+}
+
+@media (width >= 768px) {
+  .page {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .header {
+    min-height: 1024px;
+    width: calc(100% - 40px);
+  }
+
+  .header__title {
+    margin-block-start: 175px;
+    margin-inline-start: -21px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 190px;
+    margin-block-end: 5px;
+  }
+
+  .header__theme-menu-list {
+    gap: 15px;
+  }
+
+  .decorated-zone-element {
+    top: 20px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+  }
+
+  .header__text {
+    max-width: 364px;
+    margin-block-start: 165px;
+    margin-inline-end: 0;
+  }
+
+  .main {
+    margin-top: 60px;
+  }
+
+  .section-difficults {
+    display: grid;
+    grid-template-columns: min(35%, 314px) 1fr;
+    gap: 0;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-difficults__title {
+    max-width: 236px;
+  }
+
+  .description {
+    margin-left: 0;
+    max-width: 472px;
+  }
+
+  .answers {
+    display: flex;
+    flex-direction: column;
+    max-width: 728px;
+  }
+
+  .section-questions {
+    width: calc(100% - 40px);
+    margin-top: 80px;
+  }
+
+  .section-questions__text {
+    max-width: 728px;
+  }
+
+  .section-questions__title {
+    max-width: 236px;
+  }
+
+  .section-questions__text-title {
+    max-width: 728px;
+  }
+
+  .section-rules__title {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .answers-block {
+    max-width: 728px;
+    margin-bottom: 0;
+  }
+
+  .section-rules {
+    display: grid;
+    margin-top: 80px;
+    width: calc(100% - 40px);
+    grid-template-columns: min(35%, 314px) 1fr;
+  }
+
+  .rules {
+    max-width: 472px;
+  }
+
+  .section-pictures {
+    margin-top: 80px;
+    width: calc(100% - 40px);
+  }
+
+  .section-pictures__title {
+    margin-bottom: 20px;
+    max-width: 728px;
+  }
+
+  .section-pictures__content {
+    display: grid;
+    grid-template-rows: 192px 230px 318px;
+    gap: 20px;
+    grid-template-columns: auto;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-width: 479px;
+  }
+
+  .img--1 {
+    grid-column: 1/3;
+  }
+
+  .img--2 {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+
+  .img--3 {
+    grid-row: 2/4;
+  }
+
+  .img--5 {
+    grid-column: 2/4;
+  }
+
+  .footer {
+    margin-top: 60px;
+    min-height: 1024px;
+    width: calc(100% - 40px);
+  }
+}
+
+@media (width >= 1024px) {
+  .page {
+    max-width: 1023px;
+  }
+
+  .header {
+    min-height: 668px;
+  }
+
+  .header__theme-menu {
+    margin-block-end: 235px;
+    justify-self: center;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+  }
+
+  .header__theme-menu-list {
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    padding-block-start: 20px;
+  }
+
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 129.53px;
+    max-width: 1023px;
+    margin-block-start: 40px;
+    margin-inline-start: -21px;
+  }
+
+  .header__text {
+    max-width: 491px;
+    justify-self: end;
+    margin-block-start: 115px;
+  }
+
+  .main {
+    margin-top: 60px;
+  }
+
+  .section-difficults__title {
+    max-width: 315px;
+  }
+
+  .section-difficults {
+    display: grid;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-template-columns: min(35%, 314px) 1fr;
+    gap: 0;
+  }
+
+  .section-questions__title {
+    max-width: 315px;
+  }
+
+  .description {
+    margin-left: 20px;
+    max-width: 649px;
+  }
+
+  .answers {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 984px;
+  }
+
+  .section-rules__title {
+    max-width: 315px;
+  }
+
+  .rules {
+    margin-left: 20px;
+    max-width: 649px;
+  }
+
+  .section-pictures__title {
+    max-width: 984px;
+  }
+
+  .section-pictures__content {
+    grid-template-rows: 260px 315px 428px;
+  }
+
+  .img {
+    max-width: 649px;
+  }
+
+  .footer {
+    min-height: 768px;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    max-width: 471px;
   }
 }
