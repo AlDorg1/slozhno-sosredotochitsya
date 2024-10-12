@@ -33,10 +33,6 @@
     justify-content: center;
   }
 
-  .page {
-    max-width: 375px;
-  }
-
   .decorated-zone::before {
     display: block;
     content: "";
@@ -89,7 +85,7 @@
   }
 
   .header {
-    height: 100vh;
+    max-height: 100vh;
     min-height: 668px;
     width: calc(100% - 20px);
     margin-right: auto;
@@ -205,7 +201,6 @@
   }
 
   .section-difficults__title {
-    max-width: 355px;
     margin-bottom: 20px;
     color: var(--accent-color);
   }
@@ -225,12 +220,10 @@
   }
 
   .description {
-    max-width: 355px;
     margin-left: 0;
   }
 
   .section-questions__title {
-    max-width: 355px;
     color: var(--accent-color);
   }
 
@@ -242,14 +235,12 @@
   }
 
   .section-questions__text-title {
-    max-width: 355px;
     color: var(--paragraph-text);
     margin-bottom: 10px;
     margin-top: 20px;
   }
 
   .section-questions__text {
-    max-width: 355px;
     color: var(--text-color);
   }
 
@@ -266,7 +257,6 @@
   }
 
   .section-rules__title {
-    max-width: 355px;
     margin-bottom: 20px;
     margin-right: 0;
     color: var(--accent-color);
@@ -275,10 +265,6 @@
   .rules__title {
     margin-bottom: 20px;
     color: var(--paragraph-text);
-  }
-
-  .rules {
-    max-width: 355px;
   }
 
   .section-rules__text-title {
@@ -310,33 +296,32 @@
   }
 
   .section-pictures__title {
-    max-width: 355px;
     margin-bottom: 10px;
     color: var(--paragraph-text);
   }
 
   .img--1 {
-    max-width: 355px;
+    width: 100%;
     height: 142px;
   }
 
   .img--2 {
-    max-width: 355px;
+    width: 100%;
     height: 355px;
   }
 
   .img--3 {
-    max-width: 355px;
+    width: 100%;
     height: 237px;
   }
 
   .img--4 {
-    max-width: 355px;
+    width: 100%;
     height: 355px;
   }
 
   .img--5 {
-    max-width: 355px;
+    width: 100%;
     height: 237px;
   }
 
@@ -346,7 +331,7 @@
     width: calc(100% - 20px);
     margin-right: auto;
     margin-left: auto;
-    height: 100vh;
+    max-height: 100vh;
     display: flex;
     position: relative;
   }
@@ -365,10 +350,7 @@
 }
 
 @media (width >= 768px) {
-  .page {
-    max-width: 768px;
-    margin: 0 auto;
-  }
+  
 
   .header {
     min-height: 1024px;
@@ -420,19 +402,17 @@
     margin-right: auto;
   }
 
-  .section-difficults__title {
-    max-width: 236px;
-  }
+.section-difficults__title {
+  margin-right: 20px;
+}
 
   .description {
     margin-left: 0;
-    max-width: 472px;
   }
 
   .answers {
     display: flex;
     flex-direction: column;
-    max-width: 728px;
   }
 
   .section-questions {
@@ -440,17 +420,9 @@
     margin-top: 80px;
   }
 
-  .section-questions__text {
-    max-width: 728px;
-  }
-
-  .section-questions__title {
-    max-width: 236px;
-  }
-
-  .section-questions__text-title {
-    max-width: 728px;
-  }
+.section-questions__title {
+  max-width: 236px;
+}
 
   .section-rules__title {
     margin-bottom: 20px;
@@ -458,7 +430,6 @@
   }
 
   .answers-block {
-    max-width: 728px;
     margin-bottom: 0;
   }
 
@@ -469,10 +440,6 @@
     grid-template-columns: min(35%, 314px) 1fr;
   }
 
-  .rules {
-    max-width: 472px;
-  }
-
   .section-pictures {
     margin-top: 80px;
     width: calc(100% - 40px);
@@ -480,7 +447,6 @@
 
   .section-pictures__title {
     margin-bottom: 20px;
-    max-width: 728px;
   }
 
   .section-pictures__content {
@@ -495,7 +461,6 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    max-width: 479px;
   }
 
   .img--1 {
@@ -523,12 +488,9 @@
 }
 
 @media (width >= 1024px) {
-  .page {
-    max-width: 1023px;
-  }
 
   .header {
-    min-height: 668px;
+    min-height: 768px;
   }
 
   .header__theme-menu {
@@ -548,7 +510,6 @@
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 129.53px;
-    max-width: 1023px;
     margin-block-start: 40px;
     margin-inline-start: -21px;
   }
@@ -563,10 +524,6 @@
     margin-top: 60px;
   }
 
-  .section-difficults__title {
-    max-width: 315px;
-  }
-
   .section-difficults {
     display: grid;
     margin-left: 20px;
@@ -575,41 +532,26 @@
     gap: 0;
   }
 
-  .section-questions__title {
-    max-width: 315px;
-  }
-
   .description {
     margin-left: 20px;
-    max-width: 649px;
   }
+
+.section-questions__title {
+  max-width: 315px;
+}
 
   .answers {
     gap: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 984px;
-  }
-
-  .section-rules__title {
-    max-width: 315px;
   }
 
   .rules {
     margin-left: 20px;
-    max-width: 649px;
-  }
-
-  .section-pictures__title {
-    max-width: 984px;
   }
 
   .section-pictures__content {
     grid-template-rows: 260px 315px 428px;
-  }
-
-  .img {
-    max-width: 649px;
   }
 
   .footer {
